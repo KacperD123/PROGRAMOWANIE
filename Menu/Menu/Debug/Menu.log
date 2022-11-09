@@ -1,0 +1,3 @@
+﻿  Menu.cpp
+C:\Jakub Gad\Menu\Menu\Menu.cpp(262,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Menu.vcxproj -> C:\Jakub Gad\Menu\Debug\Menu.exe

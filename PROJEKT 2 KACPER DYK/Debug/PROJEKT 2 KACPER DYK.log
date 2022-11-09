@@ -1,0 +1,5 @@
+﻿  TasksWithVariables.cpp
+C:\Kacper Dyk\PROGRAMOWANIE\PROJEKT 2 KACPER DYK\TasksWithVariables.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Kacper Dyk\PROGRAMOWANIE\PROJEKT 2 KACPER DYK\TasksWithVariables.cpp(64,31): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Kacper Dyk\PROGRAMOWANIE\PROJEKT 2 KACPER DYK\TasksWithVariables.cpp(75,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  PROJEKT 2 KACPER DYK.vcxproj -> C:\Kacper Dyk\PROGRAMOWANIE\Debug\PROJEKT 2 KACPER DYK.exe
