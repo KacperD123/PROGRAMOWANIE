@@ -557,12 +557,22 @@ void task_14()
     void task_17()
     {
         int suma = 0;
-        for (int i = 1; i < 11;i++)
+        int i = 1;
+        int j = 2;
+        int k = 3;
+        int l = 4;
+        int z = 5;
+        int x = 6;
+        int c = 7;
+        int v = 8;
+        int b = 9;
+        int n = 10;
+
+
+        for (; i,j,k,l,z,x,c,v,b < 10;i,j,k,l,z,x,c,v,b++)
         {
-            cout << i * i<< endl;
-            suma = suma + (i * i);
-        }
-    }
+            cout<<"Suma kwadratow liczb od 1 do 10 wynosi: "<<(i*i)+(j*j)+(k*k)+(l*l)+(z*z)+(x*x)+(c*c)+(v*v)+(b*b)+(n*n)<<endl;
+        }    }
     int main()
     {
 
