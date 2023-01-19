@@ -552,27 +552,9 @@ void task_14()
             cout << i << endl;
         }
     }
-    //2. Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem(czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
-    void task_17()
-    {
-        string slowo;
-        int i, j;
 
-        cout << "Podaj wyraz,chcesz sprawdzic: " << endl;
-        cin >> slowo;
-
-        for (i = 0, j = slowo.length() - 1; i < j; i++, j--)
-        {
-            if (slowo[i] != slowo[j])
-                break;
-        }
-        if (i < j)
-            cout << "Podany wyraz nie jest palindronem" << endl;
-        else
-            cout << "Podany wyraz jest palindronem" << endl;
-    }
     //7. Program obliczaj¹cy sumê kwadratów liczb od 1 do 10
-    void task_18()
+    void task_17()
     {
         int suma = 0;
         for (int i = 1; i < 11;i++)
@@ -616,6 +598,5 @@ void task_14()
         //task_14();
         //task_15();
         //task_16();
-        //task_17();
-        task_18();
+        task_17();
     }
