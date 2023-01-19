@@ -76,7 +76,7 @@ void task6()
 
     cout << "Podaj wyraz,chcesz sprawdzic: "<< endl;
     cin >> slowo;
-
+     
     for (i = 0, j = slowo.length() - 1; i < j; i++, j--)
     {
         if (slowo[i] != slowo[j])
