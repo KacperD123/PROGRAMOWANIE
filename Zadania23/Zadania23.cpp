@@ -1,6 +1,8 @@
-﻿//LotOfTasks
+﻿
+//LotOfTasks
 
 /*Podstawy programowania:
+
 1. Program obliczaj¹cy œredni¹ arytmetyczn¹ dwóch liczb.
 2. Program obliczaj¹cy pole prostok¹ta.
 3. Program obliczaj¹cy objêtoœæ sto¿ka.
@@ -58,27 +60,32 @@ Dla zaawansowanych:
 #include <conio.h>
 #include <math.h>
 #include <cmath>
+#include<string.h>
+#include <unordered_set>
+
 
 using namespace std;
+
+
 /*1. Program obliczaj¹cy œredni¹ arytmetyczn¹ dwóch liczb.*/
 
 void task1()
 {
 
-    int liczba1;
-    int liczba2;
-    int srednia;
-    int ilosc_liczb = 2;
+        int liczba1;
+        int liczba2;
+        int srednia;
+        int ilosc_liczb = 2;
 
-    cout << "podaj pierwsza liczbe" << endl;
-    cin >> liczba1;
-    cout << "podaj druga liczbe" << endl;
-    cin >> liczba2;
+        cout << "podaj pierwsza liczbe" << endl;
+        cin >> liczba1;
+        cout << "podaj druga liczbe" << endl;
+        cin >> liczba2;
 
 
 
-    int wynik = (liczba1 + liczba2) / ilosc_liczb;
-    cout << "Srednia podanych liczb = " << wynik << endl;
+        int wynik = (liczba1 + liczba2) / ilosc_liczb;
+        cout << "Srednia podanych liczb = " << wynik << endl;
 
 
 }
@@ -95,59 +102,59 @@ void task2()
 
     int wynik = a * b;
 
-    if (a > 0 && b > 0)
+    if(a>0 && b>0)
         cout << "Pole prostokata wynosi: " << wynik;
     else
-        cout << "Zadna z wartosci nie moze byc rowna 0";
+        cout<<"Zadna z wartosci nie moze byc rowna 0";
 }
 
 /* 3.Program obliczaj¹cy objêtoœæ sto¿ka*/
 
 void task3()
 {
-    double H, V, r;
+    double H,V,r    ;
 
-    cout << "Podaj promien stozka" << endl;
+    cout<<"Podaj promien stozka"<<endl;
     cin >> r;
-    cout << "Podaj wysokosc stozka " << endl;
+    cout << "Podaj wysokosc stozka "<<endl;
     cin >> H;
-    V = M_PI * (r * r) * H / 3;
+    V = M_PI*(r*r)*H/3;
     cout << "Objetosc stozka wynosi = " << V;
 }
 //4. Program obliczaj¹cy pole ko³a.//
 void task4()
 {
-    double P, r;
+    double P,r;
 
-    cout << "Podaj promien kola" << endl;
-    cin >> r;
-    P = M_PI * (r * r);
-    cout << "Pole kola wynosi: " << P << endl;
+    cout<<"Podaj promien kola"<<endl;
+    cin>> r;
+    P=M_PI*(r*r);
+    cout<<"Pole kola wynosi: "<<P<<endl;
 
 }
 //5. Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2//
 void task5()
 {
-    int a, b, wynik;
-    cout << "Podaj a" << endl;
+    int a,b,wynik;
+    cout<<"Podaj a"<<endl;
     cin >> a;
-    cout << "Podaj b" << endl;
+    cout<<"Podaj b"<<endl;
     cin >> b;
-    wynik = (a * a) + (b * b);
-    cout << "Wynik wynosi: " << wynik << endl;
+    wynik=(a*a)+(b*b);
+    cout<<"Wynik wynosi: "<<wynik<<endl;
 }
 //6. Program obliczajacy pole trójkata o podstawie b i wysokosci h//
 void task6()
 {
-    float b, h, wynik;
-    cout << "Podaj dlugosc podstawy" << endl;
-    cin >> b;
-    cout << "Podaj wysokosc" << endl;
-    cin >> h;
-    if (b > 0 && h > 0)
-        cout << "Pole trojkata wynosi: " << b * h / 2;
+    float b,h,wynik;
+    cout<<"Podaj dlugosc podstawy"<<endl;
+    cin>>b;
+    cout<<"Podaj wysokosc"<<endl;
+    cin>>h;
+    if(b>0 && h>0)
+    cout<<"Pole trojkata wynosi: "<<b*h/2;
     else
-        cout << "Zadna z wartosci nie moze byc rowna 0";
+        cout<<"Zadna z wartosci nie moze byc rowna 0";
 
 }
 /*7. Program obliczaj¹cy objêtoœæ kuli o promieniu r*/
@@ -161,53 +168,53 @@ void task6()
     cout<<"ulamek to: "<<mianownik/licznik<<endl;*/
 void task7()
 {
-    double V, R;
-    cout << "Podaj promien kuli" << endl;
-    cin >> R;
-    V = (4 * M_PI * (R * R * R)) / 3;
-    if (R > 0)
-        cout << "Objetosc kuli wynosi: " << V;
+    double V,R;
+    cout<<"Podaj promien kuli"<<endl;
+    cin>>R;
+    V=(4*M_PI*(R*R*R))/3;
+    if(R>0)
+        cout<<"Objetosc kuli wynosi: "<<V;
     else
-        cout << "Promien nie moze byc rowny 0!!" << endl;
+        cout<<"Promien nie moze byc rowny 0!!"<<endl;
 }
 /* Program obliczajacy pole trapezu o podstawach a i b oraz wysokosci h*/
 void task8()
 {
-    double a, b, h, pole;
+    double a,b,h,pole;
 
-    cout << "Podaj dlugosc podstawy a" << endl;
+    cout<<"Podaj dlugosc podstawy a"<<endl;
     cin >> a;
-    cout << "Podaj dlugosc podstawy b" << endl;
+    cout <<"Podaj dlugosc podstawy b"<<endl;
     cin >> b;
-    cout << "Podaj dlugosc wysokosci h" << endl;
+    cout<<"Podaj dlugosc wysokosci h"<<endl;
     cin >> h;
-    if (a > 0 && b > 0 && h > 0)
-        cout << "Pole wynosi: " << (a + b) * h / 2 << endl;
+    if(a>0&& b>0 && h>0)
+        cout<<"Pole wynosi: "<<(a+b)*h/2<<endl;
     else
-        cout << "Zadna z wartosci nie moze byc rowna 0!!!" << endl;
+        cout<<"Zadna z wartosci nie moze byc rowna 0!!!"<<endl;
 
 }
 /*9. Program obliczajacy srednia wazona trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.*/
 /*firstNumber waga1,secondNumber waga 2,thirdNumber waga3*/
 void task9()
 {
-    int firstNumber, secondNumber, thirdNumber;
-    float srednia, suma;
+    int firstNumber,secondNumber,thirdNumber;
+    float srednia,suma;
 
-    cout << "Podaj pierwsza liczbe" << endl;
-    cin >> firstNumber;
-    cout << "Podaj druga liczbe" << endl;
-    cin >> secondNumber;
-    cout << "Podaj trzecia liczbe" << endl;
-    cin >> thirdNumber;
-    suma = firstNumber + (2 * secondNumber) + (3 * thirdNumber);
-    srednia = suma / 6;
+    cout<<"Podaj pierwsza liczbe"<<endl;
+    cin>>firstNumber;
+    cout<<"Podaj druga liczbe"<<endl;
+    cin>>secondNumber;
+    cout<<"Podaj trzecia liczbe"<<endl;
+    cin>>thirdNumber;
+    suma=firstNumber+(2*secondNumber)+(3*thirdNumber);
+    srednia=suma/6;
 
 
-    if (firstNumber > 0 && secondNumber > 0 && thirdNumber > 0)
-        cout << "Srednia wynosi: " << srednia << endl;
+    if(firstNumber>0&&secondNumber>0&&thirdNumber>0)
+        cout<<"Srednia wynosi: "<<srednia<<endl;
     else
-        cout << "Zadna z liczb nie moze byc rowna 0!!!!" << endl;
+        cout<<"Zadna z liczb nie moze byc rowna 0!!!!"<<endl;
 
 
 }
@@ -218,45 +225,44 @@ void task10()
 {
     int firstNumber;
 
-    cout << "Program sprawdzajacy czy podana liczba jest parzysta czy nieparzysta\n" << endl;
-    cout << "Podaj liczbe" << endl;
-    cin >> firstNumber;
+    cout<<"Program sprawdzajacy czy podana liczba jest parzysta czy nieparzysta\n"<<endl;
+    cout<<"Podaj liczbe"<<endl;
+    cin>>firstNumber;
 
-    if (firstNumber % 2 == 0)
-        cout << "Liczba parzysta" << endl;
+    if(firstNumber%2==0)
+         cout<<"Liczba parzysta"<<endl;
     else
-        cout << "Liczba nieparzysta" << endl;
+         cout<<"Liczba nieparzysta"<<endl;
 }
 /*2.Program sprawdzaj¹cy czy podana liczba jest dodatnia, ujemna czy równa zero*/
 void task11()
 {
 
     int firstNumber;
-    cout << "Program sprawdzaj¹cy czy podana liczba jest dodatnia, ujemna czy równa zero\n" << endl;
-    cout << "Podaj liczbe" << endl;
-    cin >> firstNumber;
+    cout<<"Program sprawdzaj¹cy czy podana liczba jest dodatnia, ujemna czy równa zero\n"<<endl;
+    cout<<"Podaj liczbe"<<endl;
+    cin>>firstNumber;
 
-    if (firstNumber > 0)
-        cout << "Liczba jest dodatnia" << endl;
-    else if (firstNumber == 0)
-        cout << "Liczba jest rowna zero" << endl;
+    if(firstNumber>0)
+        cout<<"Liczba jest dodatnia"<<endl;
+    else if (firstNumber==0)
+        cout<<"Liczba jest rowna zero"<<endl;
     else
-        cout << "Liczba jest ujemna" << endl;
+        cout<<"Liczba jest ujemna"<<endl;
 
 }
 void task12()
 /*3. Program sprawdzaj¹cy czy podany rok jest rokiem przestêpnym*/
 {
     int rok;
-    cout << "Program sprawdzajacy czy podany rok jest rokiem przestepnym\n" << endl;
-    cout << "Podaj rok do sprawdzenia" << endl;
-    cin >> rok;
+    cout<<"Program sprawdzajacy czy podany rok jest rokiem przestepnym\n"<<endl;
+    cout<<"Podaj rok do sprawdzenia"<<endl;
+    cin>>rok;
 
 
     if ((rok % 4 == 0 && rok % 100 != 0) || rok % 400 == 0) {
         cout << rok << " jest rokiem przestepnym." << endl;
-    }
-    else {
+    } else {
         cout << rok << " nie jest rokiem przestepnym." << endl;
     }
 }
@@ -265,24 +271,24 @@ void task13()
 {
     int ocena;
 
-    cout << "Program wyswietlajacy odpowiedni komunikat w zaleznosci od podanej oceny\n" << endl;
-    cout << "Podaj ocene do sprawdzenia" << endl;
-    cin >> ocena;
+    cout<<"Program wyswietlajacy odpowiedni komunikat w zaleznosci od podanej oceny\n"<<endl;
+    cout<<"Podaj ocene do sprawdzenia"<<endl;
+    cin>>ocena;
 
-    if (ocena == 6)
-        cout << "Celujacy" << endl;
-    else if (ocena == 5)
-        cout << "Bardzo dobry" << endl;
-    else if (ocena == 4)
-        cout << "Dobry" << endl;
-    else if (ocena == 3)
-        cout << "Dostateczny" << endl;
-    else if (ocena == 2)
-        cout << "Dopusczajacy" << endl;
-    else if (ocena == 1)
-        cout << "Niedostateczny" << endl;
+    if (ocena==6)
+        cout<<"Celujacy"<<endl;
+    else if(ocena==5)
+         cout<<"Bardzo dobry"<<endl;
+    else if (ocena==4)
+        cout<<"Dobry"<<endl;
+    else if (ocena==3)
+         cout<<"Dostateczny"<<endl;
+    else if (ocena==2)
+        cout<<"Dopusczajacy"<<endl;
+    else if (ocena==1)
+        cout<<"Niedostateczny"<<endl;
     else
-        cout << "PODANO ZLA WARTOSC" << endl;
+        cout<<"PODANO ZLA WARTOSC"<<endl;
 
 }
 void task14()
@@ -291,32 +297,32 @@ void task14()
 {
     string password;
 
-    cout << "Program sprawdzajacy czy podane haslo jest poprawne\n" << endl;
-    cout << "Podaj haslo" << endl;
-    cin >> password;
+    cout<<"Program sprawdzajacy czy podane haslo jest poprawne\n"<<endl;
+    cout<<"Podaj haslo"<<endl;
+    cin>>password;
 
-    if (password == "abc123")
-        cout << "haslo poprawne" << endl;
+    if(password=="abc123")
+        cout<<"haslo poprawne"<<endl;
     else
-        cout << "haslo niepoprawne" << endl;
+        cout<<"haslo niepoprawne"<<endl;
 }
 /*6.Program sprawdzaj¹cy czy podana data jest poprawna (np. sprawdzaj¹c, czy dzieñ jest z zakresu od 1 do 31, miesi¹c od 1 do 12 itd.)*/
 void task15()
 {
-    int miesiac, dzien, rok, data;
+    int miesiac, dzien,rok,data;
 
-    cout << "Program sprawdzajacy czy podana data jest poprawna" << endl;
-    cout << "Podaj dzien" << endl;
-    cin >> dzien;
-    cout << "Podaj miesiac" << endl;
-    cin >> miesiac;
-    cout << "Podaj rok" << endl;
-    cin >> rok;
-    data = dzien + miesiac + rok;
-    if ((dzien > 0 && dzien <= 31) && (miesiac > 0 && miesiac <= 12) && (rok > 0 && rok <= 2023))
-        cout << "Podana data jest poprawna" << endl;
+    cout<<"Program sprawdzajacy czy podana data jest poprawna"<<endl;
+    cout<<"Podaj dzien"<<endl;
+    cin>>dzien;
+    cout<<"Podaj miesiac"<<endl;
+    cin>>miesiac;
+    cout<<"Podaj rok"<<endl;
+    cin>>rok;
+    data=dzien+miesiac+rok;
+    if((dzien>0&&dzien<=31)&&(miesiac>0&&miesiac<=12)&&(rok>0 && rok<=2023))
+        cout<<"Podana data jest poprawna"<<endl;
     else
-        cout << "Podana data jest niepoprawna!" << endl;
+        cout<<"Podana data jest niepoprawna!"<<endl;
 }
 /*7.Program wyœwietlaj¹cy odpowiedni komunikat w zale¿noœci od podanej temperatury
 (np. "ciep³o" dla temperatury powy¿ej 20 stopni Celsjusza, "ch³odno" dla temperatury poni¿ej 10 stopni Celsjusza itd.)*/
@@ -324,16 +330,16 @@ void task16()
 {
     int temperature;
 
-    cout << "Program wyswietlajacy odpowiedni komunikat w zaleznosci od podanej temperatury\n" << endl;
-    cout << "Podaj temperature" << endl;
-    cin >> temperature;
+    cout<<"Program wyswietlajacy odpowiedni komunikat w zaleznosci od podanej temperatury\n"<<endl;
+    cout<<"Podaj temperature"<<endl;
+    cin>>temperature;
 
-    if (temperature < 10)
-        cout << "chlodno" << endl;
-    else if (temperature > 20)
-        cout << "cieplo" << endl;
+    if(temperature<10)
+        cout<<"chlodno"<<endl;
+    else if(temperature>20)
+        cout<<"cieplo"<<endl;
     else
-        cout << "Umiarkowanie" << endl;
+        cout<<"Umiarkowanie"<<endl;
 
 }
 
@@ -351,20 +357,20 @@ void task_1()
     string password;
 
 
-    do {
+    do{
 
-        cout << "Podaj haslo" << endl;
-        cin >> password;
+        cout<<"Podaj haslo"<<endl;
+        cin>>password;
 
-        if (password == "abc123")
+        if(password=="abc123")
         {
-            cout << "haslo poprawne" << endl;
+             cout<<"haslo poprawne"<<endl;
         }
-        else {
-            cout << "haslo niepoprawne" << endl;
+        else{
+            cout<<"haslo niepoprawne"<<endl;
         }
 
-    } while (password != "abc123");
+    }while(password!="abc123");
 }
 
 void task_2()
@@ -384,9 +390,9 @@ void task_2()
 1. Program wyœwietlaj¹cy na ekranie kolejne liczby naturalne od 1 do 10*/
 void task_3()
 {
-    for (int i = 1; i < 11; i++)
+    for(int i=1;i<11;i++)
     {
-        cout << i << endl;
+        cout<<i<<endl;
     }
 }
 /*2. Program obliczaj¹cy sumê liczb od 1 do 100*/
@@ -396,14 +402,14 @@ void task_4()
     for (int i = 1; i <= 100; i++) {
         sum += i;
     }
-    cout << "Suma liczb od 1 do 100 wynosi: " << sum << endl;
+    cout << "Suma liczb od 1 do 100 wynosi: " << sum <<endl;
 }
 //Program wyœwietlaj¹cy na ekranie kwadraty liczb od 1 do 10 (np. 1, 4, 9, 16 itd.)
 void task_5()
 {
-    int sum = 0;
+    int sum=0;
 
-    for (int i = 1; i < 11; i++)
+    for (int i=1;i<11;i++)
     {
         sum = i * i;
         cout << i * i << endl;
@@ -414,25 +420,25 @@ void task_6()
 //4. Program wyœwietlaj¹cy na ekranie silnie z liczb od 1 do 10 (np. 1!, 2!, 3!, 4! itd.)
 {
 
-    for (int i = 1; i < 11; i++)
+    for(int i=1;i<11;i++)
     {
-        cout << i << "!" << endl;
+        cout<<i<<"!"<<endl;
     }
 }
 void task_7()
 //5. Program wyœwietlaj¹cy na ekranie tabliczkê mno¿enia od 1 do 9 (np. 1x1=1, 1x2=2, 1x3=3 itd.).
 {
-    for (int i = 1; i < 10; i++)
+    for(int i=1;i<10;i++)
     {
-        cout << "1 * " << i << " = " << 1 * i << endl;
-        cout << "2 * " << i << " = " << 2 * i << endl;
-        cout << "3 * " << i << " = " << 3 * i << endl;
-        cout << "4 * " << i << " = " << 4 * i << endl;
-        cout << "5 * " << i << " = " << 5 * i << endl;
-        cout << "6 * " << i << " = " << 6 * i << endl;
-        cout << "7 * " << i << " = " << 7 * i << endl;
-        cout << "8 * " << i << " = " << 8 * i << endl;
-        cout << "9 * " << i << " = " << 9 * i << endl;
+        cout<<"1 * "<<i<<" = "<<1*i<<endl;
+        cout<<"2 * "<<i<<" = "<<2*i<<endl;
+        cout<<"3 * "<<i<<" = "<<3*i<<endl;
+        cout<<"4 * "<<i<<" = "<<4*i<<endl;
+        cout<<"5 * "<<i<<" = "<<5*i<<endl;
+        cout<<"6 * "<<i<<" = "<<6*i<<endl;
+        cout<<"7 * "<<i<<" = "<<7*i<<endl;
+        cout<<"8 * "<<i<<" = "<<8*i<<endl;
+        cout<<"9 * "<<i<<" = "<<9*i<<endl;
 
     }
 }
@@ -440,11 +446,11 @@ void task_8()
 //Program wyœwietlaj¹cy na ekranie wszystkie liczby podzielne przez 3 z zakresu od 1 do 100
 {
     int liczba;
-    for (int i = 1; i > 101; i++)
+    for(int i=1;i>101;i++)
     {
-        if (i % 3)
+        if(i%3)
         {
-            cout << i << endl;
+            cout<<i<<endl;
         }
     }
 }
@@ -455,22 +461,22 @@ void task_11()
 {
     int fib[20];
 
-    fib[0] = 1;
-    fib[1] = 1;
+    fib[0]=1;
+    fib[1]=1;
 
-    for (int i = 2; i < 21; i++)
+    for(int i=2;i<21;i++)
     {
-        fib[i] = fib[i - 1] + fib[i - 2];
-        cout << fib[i] << endl;
+        fib[i]=fib[i-1]+fib[i-2];
+        cout<<fib[i]<<endl;
     }
 }
 //9. Program wyœwietlaj¹cy na ekranie kolejne potêgi 2 od 2^0 do 2^10 (np. 2^0, 2^1, 2^2 itd.)
 
 void task_12()
 {
-    for (int i = 0; i < 11; i++)
+    for(int i=0;i<11;i++)
     {
-        cout << "2^" << i << endl;
+        cout<<"2^"<<i<<endl;
     }
 }
 //
@@ -480,16 +486,16 @@ void task_13()
     long double  ele[100000];
     int n;
 
-    cout << "Ile elementow mam wyznaczyc:";
-    cin >> n;
+    cout<<"Ile elementow mam wyznaczyc:";
+    cin>>n;
 
-    ele[0] = 1;
-    ele[1] = 1;
+    ele[0]=1;
+    ele[1]=1;
 
-    for (int i = 2; i < n; i++)
+    for(int i=2;i<n;i++)
     {
-        ele[i] = ele[i - 1] + ele[i - 2];
-        cout << ele[i] << endl;
+        ele[i]=ele[i-1]+ele[i-2];
+        cout<<ele[i]<<endl;
     }
 
 }
@@ -505,55 +511,42 @@ void task_14()
 //1. Program sprawdzaj¹cy czy podana liczba jest liczb¹ pierwsz¹ (czyli tak¹, która dzieli siê tylko przez 1 i przez siebie sam¹)
 {
     bool c = true;
-    int n, p;
-    cin >> n;
-    for (p = 2; p * p <= n; p++)
+    int n,p;
+    cin>>n;
+    for(p = 2;p*p<=n;p++)
     {
-        if (n % p == 0)
+        if(n%p==0)
         {
-            cout << "liczba zlozona";
+            cout<<"liczba zlozona";
             c = false;
             break;
         }
-        if (c == true) cout << "Liczba pierwsza" << endl;
+        if(c==true) cout<<"Liczba pierwsza"<<endl;
     }
+
 }
-
     //2. Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem(czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
-    void task_15()
+void task_15()
+{
+    string slowo;
+    int i, j;
+
+    cout << "Podaj wyraz,chcesz sprawdzic: "<< endl;
+    cin >> slowo;
+
+    for (i = 0, j = slowo.length() - 1; i < j; i++, j--)
     {
-        string slowo;
-        int i, j;
-
-        cout << "Podaj wyraz,chcesz sprawdzic: " << endl;
-        cin >> slowo;
-
-        for (i = 0, j = slowo.length() - 1; i < j; i++, j--)
-        {
-            if (slowo[i] != slowo[j])
-                break;
-        }
-        if (i < j)
-            cout << "Podany wyraz nie jest palindronem" << endl;
-        else
-            cout << "Podany wyraz jest palindronem" << endl;
+        if (slowo[i] != slowo[j])
+            break;
     }
-    //3. Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami (czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
+    if (i < j)
+        cout << "Podany wyraz nie jest palindronem" << endl;
+    else
+        cout << "Podany wyraz jest palindronem" << endl;
+}
+//3. Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami (czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
 
-    void task_16()
-    {
-        string slowo;
-        int i, j;
-
-        cout << "Podaj wyraz do sprawdzenia: " << endl;
-        cin >> slowo;
-        for (i = 0, j = 0; i < 10; i++)
-        {
-            cout << i << endl;
-        }
-    }
-
-    //7. Program obliczaj¹cy sumê kwadratów liczb od 1 do 10
+//7. Program obliczaj¹cy sumê kwadratów liczb od 1 do 10
     void task_17()
     {
         int suma = 0;
@@ -572,41 +565,140 @@ void task_14()
         for (; i,j,k,l,z,x,c,v,b < 10;i,j,k,l,z,x,c,v,b++)
         {
             cout<<"Suma kwadratow liczb od 1 do 10 wynosi: "<<(i*i)+(j*j)+(k*k)+(l*l)+(z*z)+(x*x)+(c*c)+(v*v)+(b*b)+(n*n)<<endl;
-        }    }
-    int main()
-    {
-
-        //task1();
-        //task2();
-        //task3();
-        //task4();
-        //task5();
-        //task6();
-        //task7();
-        //task8();
-        //task9();
-        //task10();
-        //task11();
-        //task12();
-        //task13();
-        //task14();
-        //task15();
-        //task16();
-        //task_1();
-        //task_2();
-        //task_3();
-        //task_4();
-        //task_5();
-        //task_6();
-        //task_7();
-        //task_8();
-        //task_9();
-        //task_10();
-        //task_11();
-        //task_12();
-        //task_13();
-        //task_14();
-        //task_15();
-        //task_16();
-        task_17();
+        }
     }
+/*
+1. Program implementuj¹cy algorytm szyfrowania Cezara (proste szyfrowanie, w którym ka¿dy znak w tekœcie jest zastêpowany innym znakiem, przesuniêtym o sta³¹ liczbê pozycji w alfabecie).
+2. Program obliczaj¹cy najwiêkszy wspólny dzielnik (NWD) dwóch liczb
+3. Program obliczaj¹cy najmniejsz¹ wspóln¹ wielokrotnoœæ (NWW) dwóch liczb.
+4. Program wyci¹gaj¹cy informacje z numeru PESEL
+5. Napisz program, który pobiera od u¿ytkownika ci¹g znaków i wyœwietla liczbê samog³osek i spó³g³osek w tym ci¹gu.
+*/
+//2.Program NWD
+int NWD(int a, int b)
+{
+    while(a!=b)
+       if(a>b)
+           a=a-b;
+       else
+           b=b-a;
+    return a; // lub b - obie zmienne przechowują wynik NWD(a,b)
+}
+void task_18()
+{
+    int a,b;
+
+    cout<<"Podaj 1 liczbe"<<endl;
+    cin>>a;
+    cout<<"Podaj 2 liczbe"<<endl;
+    cin>>b;
+
+    cout<<"NWD("<<a<<","<<b<<") = "<<NWD(a,b)<<endl;
+
+}
+//3.Program NWW
+void task_19()
+{
+    unsigned int a,b;
+    cout<<"Podaj 1 liczbe"<<endl;
+    cin>>a;
+    cout<<"Podaj 2 liczbe"<<endl;
+    cin>>b;
+
+    cout<<"NWW("<<a<<", "<<b<<") = "<<a/NWD(a,b)*b<<endl;
+
+}
+//1 Program wyciągający informacje z numeru pesel
+void szyfrowanie(int klucz,char tab[])
+{
+    int dl = strlen(tab);
+
+    if(!(klucz >= -26&& klucz <=26)) return;
+
+    if(klucz >=0)
+    {
+        for(int i=0;i<dl;i++)
+        if(tab[i] + klucz <='z')
+        {
+            tab[i]+=klucz;
+        }
+        else
+        {
+            tab[i] = tab[i] + klucz - 26;
+        }
+    }
+    else
+    {
+        for(int i=0;i<dl;i++)
+        if(tab[i] + klucz >='a')
+        {
+            tab[i]+= klucz;
+        }
+        else
+        {
+            tab[i] = tab[i] + klucz + 26;
+        }
+    }
+
+}
+void task_20()
+{
+    char tab[1001];
+
+    int klucz;
+
+    cout<<"Podaj wyraz skladajacy sie z malych liter: ";
+    cin>>tab;
+
+    cout<<"Podaj klucz z przedzialu [-26..26]: ";
+    cin>>klucz;
+
+    szyfrowanie(klucz,tab); //szyfrowanie
+
+    cout<<"Po zaszyfrowaniu: "<<tab<<endl;
+
+    szyfrowanie(-klucz,tab); //deszyfrowanie
+
+    cout<<"Po rozszyfrowaniu: "<<tab<<endl;
+
+}
+int main()
+{
+
+    //task1();
+    //task2();
+    //task3();
+    //task4();
+    //task5();
+    //task6();
+    //task7();
+    //task8();
+    //task9();
+    //task10();
+    //task11();
+    //task12();
+    //task13();
+    //task14();
+    //task15();
+    //task16();
+    //task_1();
+    //task_2();
+    //task_3();
+    //task_4();
+    //task_5();
+    //task_6();
+    //task_7();
+    //task_8();
+    //task_9();
+    //task_10();
+    //task_11();
+    //task_12();
+    //task_13();
+    //task_14();
+    //task_15();
+    //task_16();
+    //task_17();
+    //task_18();
+    //task_19();
+    task_20();
+}
